@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <!-- Link to your CSS file -->
+  <link rel="stylesheet" href="logos.css">
+
+  
+  <style>
+    /* General body styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #524f4f;
+      background: #d2cdcd;
+    }
+    header {
+      background: #343333b1;
+      color: #fff;
+      padding: 1rem 0;
+      text-align: center;
+    }
+    header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-top: 1.0rem;
+    }
+    header h1 {
+      margin: 0.5rem 0;
+    }
+    header p {
+      font-style: italic;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #444;
+    }
+    nav a {
+      color: #fff;
+      padding: 1rem;
+      text-decoration: none;
+    }
+    nav a:hover {
+      background: #d792fd;
+      color: #333;
+    }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 1rem;
+    }
+    .section {
+      background: #fff;
+      margin: 1rem 0;
+      padding: 1.0rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(209, 204, 204, 0.5);
+    }
+    .portfolio-item {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .portfolio-item div {
+      flex: 1 1 calc(33% - 1rem);
+      background: #f9f9f9;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      text-align: center;
+    }
+    .portfolio-item div:hover {
+      box-shadow: 0 0 10px rgb(122, 249, 97);
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #524f4f;
+      color: #fff;
+    }
+    footer a {
+      color: #00bcd4;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="photo1.jpg" alt="Profile Photo">
+    <h1>Dennis Carlos</h1>
+    <p>BSIT Undergraduate student with a passion for Technology and Innovation</p>
+  </header>
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="container">
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p>Hi there! My name is Dennis Carlos, and I’m currently pursuing a degree in Bachelor of Science in Information Technology (BSIT) at St. Dominic College of Asia. 
+        I am very passionate about web designing, programming, networking, project development and finding innovative solutions to real-world problems. 
+        Welcome to my portfolio!</p>
+    </section>
+    <section id="portfolio" class="section">
+      <h2>Portfolio</h2>
+      <div class="portfolio-item">
+        <div>
+          <h3>Tech Stack</h3>
+          <p>A list of my currently known languages and Hardware Proficiencies.</p>
+          
+            <a href="MyLanguages.html" target="_blank" id="programming-link">View</a>
+          
+        </div>
+        <div>
+          <h3>Other Skills</h3>
+          <p>CCTV Installation & Biometrics.</p>
+          
+            <a href="MySkills.html" target="_blank">View</a>
+          
+        </div>
+        <div>
+          <h3>My References</h3>
+          <p>Learn more about my professional connections.</p>
+          
+            <a href="MyReferences.html" target="_blank">View</a>
+          
+        </div>
+
+        <div>
+          <h3>Certifications</h3>
+          <p>Trade and Skill Certifications.</p>
+          
+            <a href="MyCertifications.html" target="_blank">View</a>
+          
+        </div>
+      </div>  
+    </section>
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <p>If you’d like to work with me, collaborate on a project or simply learn together, feel free to reach out!</p>
+      <p>Email: <a href="mailto:dennis.carlos@sdca.edu.ph">dennis.carlos@sdca.edu.ph</a></p>
+    </section>
+  </div>
+  <footer>
+    <p>&copy; 2025 Dennis Carlos | Designed by Me &copy; in California</p>
+  </footer>
+</body>
+</html>

@@ -29,10 +29,6 @@ body {
   background-color: rgba(147, 201, 244, 0.244) !important;
 }
 
-.navmenu {
-  background-image: url('img/ic_menu.png');
-}
-
 .navtext1 {
   color: rgb(255, 202, 104);
 }

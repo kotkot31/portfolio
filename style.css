@@ -1,3 +1,14 @@
+body {
+  font-family: "Roboto Mono", monospace;
+}
+
+.roboto-mono-font {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
 #vanta-bg {
   min-height: 100vh;
   display: flex;

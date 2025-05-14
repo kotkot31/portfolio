@@ -1,13 +1,17 @@
 #vanta-bg {
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .about, .tech {
-  max-width: 800px;
-  width: 90%;
-  justify-self: center;
+  padding-right: 10%;
+  padding-left: 10%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .navbar {
@@ -45,14 +49,16 @@
 
 .feet {
   background-color: rgba(49, 143, 237, 0.3);
-  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 1000;
+  position: fixed;
+  backdrop-filter: blur(8px);
 }
 
 .p2 {
-  font-size: 1rem;
+  font-size: 1rem !important;
   color: rgb(255, 255, 255);
 }
 
@@ -152,5 +158,9 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.pptcont {
+  margin-top: 50px;
 }
 

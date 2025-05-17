@@ -13,13 +13,16 @@ VANTA.CELLS({
 
 new Typed('#typed-output', {
   strings: [
-    "I am an aspiring app developer.",
-    "I love creating responsive website.",
-    "Passionate about design and coding."
+    "Hi there!",
+    "I like creating responsive website.",
+    "Very passionate about design and coding.",
+    "Interested?",
+    "Feel free to reach me out.",
+    "Thanks for visiting my site.",
   ],
-  typeSpeed: 50,       // Speed of typing
-  backSpeed: 25,       // Speed of backspacing
-  backDelay: 1000,     // Delay before backspacing
-  loop: true           // Repeat the typing loop
+  typeSpeed: 40,       
+  backSpeed: 25,       
+  backDelay: 1500,     
+  loop: true           
 });
 

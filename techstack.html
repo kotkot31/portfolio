@@ -9,6 +9,40 @@
     rel="stylesheet"
   >
   <link href="style.css" rel="stylesheet">
+  <style>
+    .tech-tooltip {
+      position: absolute;
+      z-index: 1000;
+      background: rgba(40, 40, 60, 0.32); /* glassy dark background */
+      color: #fff;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.18), 0 1.5px 8px rgba(0,0,0,0.10);
+      padding: 18px 24px 16px 24px;
+      font-size: 1.08rem;
+      max-width: 260px;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.18s, box-shadow 0.18s;
+      border: 1.5px solid rgba(255,255,255,0.18);
+      backdrop-filter: blur(10px) saturate(1.5);
+      font-family: 'Segoe UI', 'Arial', sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      text-shadow: 0 1px 6px rgba(0,0,0,0.25), 0 0px 1px #222;
+    }
+    .tech-tooltip::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 12px 12px 0 12px;
+      border-style: solid;
+      border-color: rgba(40, 40, 60, 0.32) transparent transparent transparent;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.10));
+      backdrop-filter: blur(10px) saturate(1.5);
+    }
+  </style>
 </head>
 <body>
   <div id="vanta-bg">
@@ -40,47 +74,47 @@
       <h1 class="header1 mb-5">Techstack</h1>
       <div class="tech-container">
         <div class="d-flex flex-wrap justify-content-center align-items-center">
-          <div class="tech-card d-flex flex-column align-items-center justify-content-center">
+          <div class="tech-card d-flex flex-column align-items-center justify-content-center" data-tooltip="A powerful general-purpose programming language, widely used for system/software development.">
             <img class="rounded-circle" src="img/ic_c.png" width="60" height="60" alt="C">
             <p class="p2 text-center">C</p>
           </div>
-          <div class="tech-card d-flex flex-column align-items-center justify-content-center">
+          <div class="tech-card d-flex flex-column align-items-center justify-content-center" data-tooltip="An extension of C, supporting object-oriented programming and widely used for high-performance applications.">
             <img class="rounded-circle" src="img/ic_c++.png" width="60" height="60" alt="C++">
             <p class="p2 text-center">C++</p>
           </div>
-          <div class="tech-card d-flex flex-column align-items-center justify-content-center">
+          <div class="tech-card d-flex flex-column align-items-center justify-content-center" data-tooltip="The standard markup language for creating web pages and web applications.">
             <img class="rounded-circle" src="img/ic_html.png" width="60" height="60" alt="HTML">
             <p class="p2 text-center">HTML</p>
           </div>
-          <div class="tech-card d-flex flex-column align-items-center justify-content-center">
+          <div class="tech-card d-flex flex-column align-items-center justify-content-center" data-tooltip="A style sheet language used for describing the look and formatting of web pages.">
             <img class="rounded-circle" src="img/ic_css.png" width="60" height="60" alt="CSS">
             <p class="p2 text-center">CSS</p>
           </div>
-          <div class="tech-card d-flex flex-column align-items-center justify-content-center">
+          <div class="tech-card d-flex flex-column align-items-center justify-content-center" data-tooltip="A versatile scripting language for web development, enabling interactive and dynamic content.">
             <img class="rounded-circle" src="img/ic_javas.gif" width="60" height="60" alt="JavaScript">
             <p class="p2 text-center">JavaScript</p>
           </div>
-          <div class="tech-card d-flex flex-column align-items-center justify-content-center">
+          <div class="tech-card d-flex flex-column align-items-center justify-content-center" data-tooltip="A popular, platform-independent programming language used for building robust applications.">
             <img class="rounded-circle" src="img/ic_java.gif" width="60" height="60" alt="Java">
             <p class="p2 text-center">Java</p>
           </div>
-          <div class="tech-card d-flex flex-column align-items-center justify-content-center">
+          <div class="tech-card d-flex flex-column align-items-center justify-content-center" data-tooltip="The official IDE for Android app development, based on IntelliJ IDEA.">
             <img class="rounded-circle" src="img/ic_astudio.png" width="60" height="60" alt="Android">
             <p class="p2 text-center">Android Studio</p>
           </div>
-          <div class="tech-card d-flex flex-column align-items-center justify-content-center">
+          <div class="tech-card d-flex flex-column align-items-center justify-content-center" data-tooltip="A distributed version control system for tracking changes in source code.">
             <img class="rounded-circle" src="img/ic_git.png" width="60" height="60" alt="Git">
             <p class="p2 text-center">Git</p>
           </div>
-          <div class="tech-card d-flex flex-column align-items-center justify-content-center">
+          <div class="tech-card d-flex flex-column align-items-center justify-content-center" data-tooltip="A web-based platform for version control and collaborative software development.">
             <img class="rounded-circle" src="img/ic_github.png" width="60" height="60" alt="GitHub">
             <p class="p2 text-center">GitHub</p>
           </div>
-          <div class="tech-card d-flex flex-column align-items-center justify-content-center">
+          <div class="tech-card d-flex flex-column align-items-center justify-content-center" data-tooltip="A high-level, interpreted programming language known for its readability and versatility.">
             <img class="rounded-circle" src="img/ic_python.gif" width="60" height="60" alt="Python">
             <p class="p2 text-center">Python</p>
           </div>
-          <div class="tech-card d-flex flex-column align-items-center justify-content-center">
+          <div class="tech-card d-flex flex-column align-items-center justify-content-center" data-tooltip="A popular open-source relational database management system.">
             <img class="rounded-circle" src="img/ic_sql.png" width="60" height="60" alt="MySQL">
             <p class="p2 text-center">MySQL</p>
           </div>
@@ -100,5 +134,46 @@
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Custom tech card tooltip logic
+      const tooltip = document.createElement('div');
+      tooltip.className = 'tech-tooltip';
+      document.body.appendChild(tooltip);
+      let activeCard = null;
+      document.querySelectorAll('.tech-card[data-tooltip]').forEach(card => {
+        card.addEventListener('mouseenter', function(e) {
+          activeCard = card;
+          tooltip.textContent = card.getAttribute('data-tooltip');
+          const rect = card.getBoundingClientRect();
+          tooltip.style.left = (rect.left + rect.width/2 - tooltip.offsetWidth/2) + 'px';
+          tooltip.style.top = (rect.top - tooltip.offsetHeight - 16 + window.scrollY) + 'px';
+          tooltip.style.opacity = 1;
+          // Reposition after content set
+          setTimeout(function() {
+            const rect = card.getBoundingClientRect();
+            tooltip.style.left = (rect.left + rect.width/2 - tooltip.offsetWidth/2) + 'px';
+            tooltip.style.top = (rect.top - tooltip.offsetHeight - 16 + window.scrollY) + 'px';
+          }, 10);
+        });
+        card.addEventListener('mousemove', function(e) {
+          const rect = card.getBoundingClientRect();
+          tooltip.style.left = (rect.left + rect.width/2 - tooltip.offsetWidth/2) + 'px';
+          tooltip.style.top = (rect.top - tooltip.offsetHeight - 16 + window.scrollY) + 'px';
+        });
+        card.addEventListener('mouseleave', function() {
+          tooltip.style.opacity = 0;
+          activeCard = null;
+        });
+      });
+      window.addEventListener('scroll', function() {
+        if (activeCard) {
+          const rect = activeCard.getBoundingClientRect();
+          tooltip.style.left = (rect.left + rect.width/2 - tooltip.offsetWidth/2) + 'px';
+          tooltip.style.top = (rect.top - tooltip.offsetHeight - 16 + window.scrollY) + 'px';
+        }
+      });
+    });
+  </script>
 </body>
 </html>

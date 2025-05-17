@@ -14,9 +14,20 @@
         <a class="navtext1 navbar-brand" href="certifications.html">Go Back</a>
       </div>
     </nav>
-    <div class="pptcont d-flex justify-content-center align-items-center">
-      <img src="img/powerpoint.jpg" width="80%">
+    <div class="pptcont d-flex justify-content-center align-items-center" style="min-height: 70vh;">
+      <img src="img/powerpoint.jpg" class="img-fluid ppt-img" style="max-width: 900px; width: 100%; height: auto; border-radius: 18px; box-shadow: 0 4px 24px rgba(0,0,0,0.13);">
     </div>
+    <style>
+      @media (max-width: 600px) {
+        .pptcont {
+          padding: 0 8px;
+        }
+        .ppt-img {
+          max-width: 100% !important;
+          border-radius: 10px !important;
+        }
+      }
+    </style>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.cells.min.js"></script>

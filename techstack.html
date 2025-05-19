@@ -42,6 +42,43 @@
       filter: drop-shadow(0 2px 4px rgba(0,0,0,0.10));
       backdrop-filter: blur(10px) saturate(1.5);
     }
+    @media (max-width: 900px) {
+      .d-flex.flex-wrap.justify-content-center.align-items-center {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: stretch;
+        gap: 0;
+      }
+      .tech-card {
+        flex: 1 1 40%;
+        max-width: 45%;
+        min-width: 180px;
+        margin: 10px 2.5%;
+      }
+    }
+    @media (max-width: 600px) {
+      .d-flex.flex-wrap.justify-content-center.align-items-center {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: stretch;
+      }
+      .tech-card {
+        width: 50%;
+        max-width: 50%;
+        min-width: 120px;
+        margin: 8px 0;
+        box-sizing: border-box;
+      }
+    }
+    @media (max-width: 400px) {
+      .tech-card {
+        width: 100%;
+        max-width: 100%;
+        min-width: 100px;
+        margin: 8px 0;
+      }
+    }
   </style>
 </head>
 <body>
@@ -71,7 +108,7 @@
       </div>
     </nav>
     <div class="tech d-block mt-5 text-center">
-      <h1 class="header1 mb-5">Techstack</h1>
+      <h1 class="header1 mb-5">Tech Stack</h1>
       <div class="tech-container">
         <div class="d-flex flex-wrap justify-content-center align-items-center">
           <div class="tech-card d-flex flex-column align-items-center justify-content-center" data-tooltip="A powerful general-purpose programming language, widely used for system/software development.">

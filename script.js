@@ -26,3 +26,9 @@ new Typed('#typed-output', {
   loop: true           
 });
 
+const typedOutput = document.getElementById('typed-output');
+if (typedOutput) {
+  typedOutput.style.fontStyle = 'italic';
+  typedOutput.style.fontSize = '0.98em'; // adjusted this for slightly smaller display
+}
+

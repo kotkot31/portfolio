@@ -70,6 +70,25 @@ select {
   background: var(--page-bg);
 }
 
+body.home-page #vanta-bg {
+  background-image:
+    linear-gradient(rgba(5, 12, 25, 0.56), rgba(5, 12, 25, 0.62)),
+    url("img/home-it-background.jpg");
+  background-position: center, center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body.home-page #vanta-bg canvas {
+  opacity: 0.1 !important;
+}
+
+:root[data-theme="light"] body.home-page #vanta-bg {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.38), rgba(255, 255, 255, 0.48)),
+    url("img/home-it-background.jpg");
+}
+
 #vanta-bg canvas {
   transition: opacity 0.25s ease;
 }
@@ -303,20 +322,29 @@ select {
 }
 
 .cert-container {
-  max-width: 960px;
+  max-width: 1120px;
   margin: 0 auto;
   padding: 0 1rem 6rem;
 }
 
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 1.25rem;
+  text-align: left;
+}
+
 .cert-card {
   display: grid;
-  grid-template-columns: 112px minmax(0, 1fr);
+  grid-template-columns: 76px minmax(0, 1fr);
   align-items: center;
-  gap: 0.25rem 1.25rem;
-  max-width: 760px;
-  margin: 1rem auto;
-  padding: 1.25rem;
-  text-align: left;
+  align-content: center;
+  gap: 0.35rem 0.9rem;
+  width: 100%;
+  min-height: 230px;
+  margin: 0;
+  padding: 1.2rem;
   color: var(--text);
   background: var(--surface);
   border: 1px solid var(--border);
@@ -326,15 +354,16 @@ select {
 }
 
 .cert-logo {
-  grid-row: span 5;
+  grid-column: 1;
+  grid-row: 1 / span 6;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .cert-logo img {
-  max-width: 100px;
-  max-height: 100px;
+  max-width: 72px;
+  max-height: 72px;
   object-fit: contain;
 }
 
@@ -351,9 +380,18 @@ select {
 
 .cert-card .cert-issuer,
 .cert-card .cert-date,
-.cert-card .cert-id {
+.cert-card .cert-id,
+.cert-card .cert-coverage {
   color: var(--text-muted);
   font-size: 0.92rem !important;
+}
+
+.cert-card .cert-coverage {
+  line-height: 1.55;
+}
+
+.cert-card .cert-coverage strong {
+  color: var(--text);
 }
 
 .cert-card .cert-verify {
@@ -415,6 +453,34 @@ a.project-card:focus-visible {
   grid-column: 1 / -1;
 }
 
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin: 0.5rem 0 0.25rem;
+}
+
+.project-gallery figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.project-gallery img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: top;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.project-gallery figcaption {
+  margin-top: 0.45rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
 .project-featured h3 {
   margin: 1.25rem 0 0.5rem;
   color: var(--accent-green);
@@ -425,6 +491,15 @@ a.project-card:focus-visible {
 .project-card p {
   color: var(--text-muted);
   line-height: 1.75;
+}
+
+.project-objectives {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--text-muted);
+  line-height: 1.65;
 }
 
 .project-tags {
@@ -487,14 +562,15 @@ a.project-card:focus-visible {
   }
 
   .cert-card {
-    grid-template-columns: 76px minmax(0, 1fr);
-    gap: 0.2rem 0.85rem;
+    grid-template-columns: 64px minmax(0, 1fr);
+    min-height: 0;
+    gap: 0.2rem 0.75rem;
     padding: 1rem;
   }
 
   .cert-logo img {
-    max-width: 72px;
-    max-height: 72px;
+    max-width: 60px;
+    max-height: 60px;
   }
 
   .cert-card .cert-title {
@@ -507,6 +583,16 @@ a.project-card:focus-visible {
 
   .project-card {
     padding: 1.25rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .cert-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .project-gallery {
+    grid-template-columns: 1fr;
   }
 }
 

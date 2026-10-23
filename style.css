@@ -222,7 +222,7 @@ body.about-page .about .p2 {
 }
 
 #about-headed {
-  scroll-margin-top: 1rem;
+  scroll-margin-top: 0;
 }
 
 .about-subheading {

@@ -150,7 +150,7 @@ body.training-page #vanta-bg canvas {
 
 body.techstack-page #vanta-bg {
   background-image:
-    linear-gradient(rgba(8, 17, 30, 0.58), rgba(8, 17, 30, 0.68)),
+    linear-gradient(rgba(8, 18, 34, 0.46), rgba(8, 18, 34, 0.56)),
     url("img/techstack-background.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -212,7 +212,7 @@ body.home-page #vanta-bg canvas {
 
 :root[data-theme="light"] body.techstack-page #vanta-bg {
   background-image:
-    linear-gradient(rgba(243, 246, 251, 0.76), rgba(243, 246, 251, 0.84)),
+    linear-gradient(rgba(243, 246, 251, 0.24), rgba(243, 246, 251, 0.34)),
     url("img/techstack-background.png");
 }
 
@@ -938,10 +938,16 @@ a.project-card:focus-visible {
   display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
-  object-fit: cover;
-  object-position: top;
+  object-fit: contain;
+  background: rgba(7, 13, 25, 0.82);
   border: 1px solid var(--border);
   border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
+}
+
+:root[data-theme="light"] .project-gallery img {
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 8px 20px rgba(39, 57, 82, 0.1);
 }
 
 .project-gallery figcaption {

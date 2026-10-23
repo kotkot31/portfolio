@@ -170,6 +170,52 @@ body.about-page .about .p2 {
   color: #e7edf2;
 }
 
+.about-content {
+  width: min(100%, 900px);
+  max-height: calc(100vh - 9rem);
+  max-height: calc(100dvh - 9rem);
+  overflow-y: auto;
+  margin: 0 auto;
+  padding: 0 1rem 2rem 0;
+  overscroll-behavior: contain;
+  scrollbar-color: rgba(203, 213, 225, 0.55) transparent;
+  scrollbar-width: thin;
+}
+
+.about-content::-webkit-scrollbar {
+  width: 0.55rem;
+}
+
+.about-content::-webkit-scrollbar-thumb {
+  background: rgba(203, 213, 225, 0.5);
+  border-radius: 999px;
+}
+
+.about-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.about-tagline {
+  margin: 0 0 2rem;
+  color: var(--accent-green);
+  font-size: 1.15rem;
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: 0.015em;
+}
+
+.about-subheading {
+  margin: 2rem 0 0.9rem;
+  color: var(--accent);
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.about-content .p2 {
+  margin-bottom: 1.15rem;
+  line-height: 1.85;
+}
+
 body.home-page #vanta-bg canvas {
   opacity: 0.1 !important;
 }

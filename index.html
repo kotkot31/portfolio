@@ -24,20 +24,16 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="navtext1 nav-link" href="about.html">About Me</a>
-            </li>
-            <li class="nav-item">
-              <a class="navtext1 nav-link" href="certifications.html">Certifications</a>
-            </li>
-            <li class="nav-item">
-              <a class="navtext1 nav-link" href="techstack.html">Tech Stack</a>
-            </li>
-            <li class="nav-item">
-              <a class="navtext1 nav-link" href="projects.html">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="navtext1 nav-link" href="contact.html">Contact</a>
+            <li class="nav-item dropdown pages-dropdown">
+              <button class="navtext1 nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="about.html">About Me</a></li>
+                <li><a class="dropdown-item" href="certifications.html">Certifications</a></li>
+                <li><a class="dropdown-item" href="techstack.html">Tech Stack</a></li>
+                <li><a class="dropdown-item" href="projects.html">Projects</a></li>
+                <li><a class="dropdown-item" href="training.html">Training and Awards</a></li>
+                <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+              </ul>
             </li>
             <li class="nav-item theme-toggle-item">
               <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode" aria-pressed="true"><span data-theme-icon aria-hidden="true">☾</span><span>Dark mode</span></button>
@@ -47,24 +43,39 @@
       </div>
     </nav>
     
-    <div class="d-block mt-5">
-      <div class="text-center">
-        <img class="rounded-circle mt-5" src="img/me.jpg" width="130" ; height="130">
-        <h1 class="header1 mt-5">DENNIS CARLOS</h1>
-        <p id="typed-output" class="p1"></p>
-      </div>
-    </div>
+    <main class="home-content">
+      <section class="home-hero text-center">
+        <img class="rounded-circle home-profile-photo" src="img/me.jpg" width="130" height="130" alt="Dennis Carlos">
+        <p class="home-eyebrow">BSIT STUDENT · ASPIRING TECHNOLOGY PROFESSIONAL</p>
+        <h1 class="header1">I build practical technology for real-world needs.</h1>
+        <p class="home-intro">I’m Dennis Carlos, a BSIT working student exploring web development, networking, cybersecurity, and connected systems. Take a look at the projects I’m learning and building.</p>
+        <div class="home-actions">
+          <a class="home-button home-button-primary" href="projects.html">Explore my projects</a>
+          <a class="home-button" href="contact.html">Connect with me</a>
+        </div>
+      </section>
+      <section class="home-featured" aria-labelledby="featured-projects-title">
+        <h2 id="featured-projects-title" class="header1 text-center">Featured Projects</h2>
+        <div class="home-project-grid">
+          <a class="home-project-card" href="projects.html#intellishield">
+            <span class="home-project-type">FRAUD MONITORING · MACHINE LEARNING</span>
+            <h3>IntelliShield</h3>
+            <p>A fraud monitoring and risk intelligence platform that combines transaction analysis, rule-based checks, and machine learning.</p>
+            <span class="home-project-cta">View project →</span>
+          </a>
+          <a class="home-project-card" href="projects.html#klir">
+            <span class="home-project-type">IoT · ANALYTICS · PREDICTIVE MAINTENANCE</span>
+            <h3>KLIR</h3>
+            <p>An IoT capstone project connecting restroom devices with sanitation monitoring, operational analytics, and maintenance workflows.</p>
+            <span class="home-project-cta">View project →</span>
+          </a>
+        </div>
+      </section>
+    </main>
 
-    <footer class="feet">
-      <div class="d-flex align-items-center justify-content-center">
-        <p class="p2 m-0 me-2">Designed with passion</p>
-        <img src="img/cute.gif" height="60" width="72" alt="Animated bunny working at a laptop">
-      </div>
-    </footer>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.cells.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <script src="script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

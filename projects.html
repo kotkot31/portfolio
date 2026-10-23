@@ -21,11 +21,17 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="navtext1 nav-link" href="about.html">About Me</a></li>
-            <li class="nav-item"><a class="navtext1 nav-link" href="certifications.html">Certifications</a></li>
-            <li class="nav-item"><a class="navtext1 nav-link" href="techstack.html">Tech Stack</a></li>
-            <li class="nav-item"><a class="navtext1 nav-link" href="projects.html" aria-current="page">Projects</a></li>
-            <li class="nav-item"><a class="navtext1 nav-link" href="contact.html">Contact</a></li>
+            <li class="nav-item dropdown pages-dropdown">
+              <button class="navtext1 nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="about.html">About Me</a></li>
+                <li><a class="dropdown-item" href="certifications.html">Certifications</a></li>
+                <li><a class="dropdown-item" href="techstack.html">Tech Stack</a></li>
+                <li><a class="dropdown-item" href="projects.html" aria-current="page">Projects</a></li>
+                <li><a class="dropdown-item" href="training.html">Training and Awards</a></li>
+                <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+              </ul>
+            </li>
             <li class="nav-item theme-toggle-item">
               <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode" aria-pressed="true"><span data-theme-icon aria-hidden="true">☾</span><span>Dark mode</span></button>
             </li>
@@ -41,7 +47,7 @@
       </header>
 
       <section class="projects-grid text-start" aria-label="Project list">
-        <article class="project-card project-featured">
+        <article id="klir" class="project-card project-featured">
           <h2>KLIR: An IoT-Based Toilet Sanitation, Analytics, and Predictive Maintenance Management System</h2>
           <h3>Overview</h3>
           <p>KLIR combines automated restroom hardware with a web-based operations and administration hub. The system is designed to keep the toilet’s local operating sequence available while the cloud services handle device monitoring, configuration, maintenance assignments, analytics, alerts, reporting, and remote administration. The application is being developed as a group Capstone 1 project at St. Dominic College of Asia.</p>
@@ -58,7 +64,7 @@
             <li>Prepared project documentation.</li>
           </ul>
           <p class="project-team"><strong>Project team:</strong> Christian Ivan A. Los Baños, Dennis V. Carlos, James Carl V. Alvarez, Justine M. Lopez, and Maria Rollainne R. Lindog.</p>
-          <p class="project-status">Status: In development.</p>
+          <p class="project-status">Status: In progress.</p>
           <h3>Technologies &amp; Components</h3>
           <dl class="project-stack" aria-label="KLIR technologies and components">
             <div><dt>Frontend</dt><dd>Next.js (React), TypeScript, Tailwind CSS, DaisyUI</dd></div>
@@ -117,7 +123,7 @@
             <li>Modified the hardware design.</li>
           </ul>
           <p class="project-team"><strong>Project team:</strong> Christian Ivan A. Los Baños, Dennis V. Carlos, James Carl V. Alvarez, Justine M. Lopez, and Maria Rollainne R. Lindog.</p>
-          <p class="project-status">Status: In development.</p>
+          <p class="project-status">Status: In progress.</p>
           <h3>Technologies &amp; Components</h3>
           <div class="project-tags project-tech-tags" aria-label="KLIR IoT technologies and components">
             <span class="project-tag">ESP32 / ESP8266</span>
@@ -177,7 +183,7 @@
             <div><dt>Build and testing</dt><dd>EAS for APK builds, Jest, and Maestro end-to-end testing</dd></div>
           </dl>
           <p class="project-team"><strong>Project team:</strong> Christian Ivan A. Los Baños, Dennis V. Carlos, James Carl V. Alvarez, Justine M. Lopez, and Maria Rollainne R. Lindog.</p>
-          <p class="project-status">Status: In development.</p>
+          <p class="project-status">Status: In progress.</p>
           <div class="project-gallery project-gallery-mobile" aria-label="KLIR Mobile Application screenshots">
             <figure>
               <img src="img/klir-mobile-inbox.jpeg" alt="KLIR mobile inbox showing today's maintenance task counts and task queue" loading="lazy">
@@ -198,7 +204,7 @@
           </div>
         </article>
 
-        <article class="project-card project-featured">
+        <article id="intellishield" class="project-card project-featured">
           <h2>IntelliShield Analytics</h2>
           <p>Developed as my individual Capstone 1 research project, IntelliShield is a fraud monitoring and risk intelligence platform for importing transaction data and reviewing suspicious activity. Administrators can upload CSV datasets, inspect individual transactions alongside rule risk scores and model fraud probabilities, and compare fraud and legitimate transaction totals. The application combines rule-based checks, behavioral profiling, device and IP velocity signals, Gaussian anomaly analysis, logistic regression, and a neural network to help surface both straightforward and less obvious fraud patterns.</p>
           <p>Analytics views summarize model metrics, transaction distributions, fraud triggers, and model performance across training batches. Admins can retrain models with labeled Firestore records, subject to data requirements, while system monitoring tracks upload activity, errors, and accuracy over time. The audit trail records administrative and data-management events and supports date filtering, CSV/PDF export, and printing. Role-based access separates security analyst and administrator capabilities, with user management and audit logging supporting oversight.</p>
@@ -209,7 +215,7 @@
             <li>Support labeled-data review and controlled model retraining while monitoring system errors, uploads, and model performance.</li>
             <li>Provide auditable, role-based administration with exportable records for operational review and reporting.</li>
           </ul>
-          <p class="project-status">Status: Further testing and system updates.</p>
+          <p class="project-status">Status: Further real-world data testing and ongoing system updates.</p>
           <h3>Role &amp; Contributions</h3>
           <ul class="project-objectives">
             <li>Full-stack development, systems analysis, application design, and UI/UX.</li>
@@ -275,7 +281,7 @@
             <li>Present services including systems integration, data center installation, infrastructure assessment, and technical support.</li>
             <li>Provide customer account access alongside support contact details and answers to common questions.</li>
           </ul>
-          <p class="project-status">Status: In development.</p>
+          <p class="project-status">Status: In progress.</p>
           <h3>Role &amp; Contributions</h3>
           <ul class="project-objectives">
             <li>Systems design and development, UI/UX, and functional testing.</li>
@@ -322,7 +328,7 @@
 
         <article class="project-card project-coming-soon">
           <h2>More projects coming soon</h2>
-          <p>I’m working on more projects. Check back soon to see what I build next.</p>
+          <p>I’m working on it. Check back soon to see what I build next.</p>
           <div class="project-tags" aria-label="Interests">
             <span class="project-tag">Web development</span>
             <span class="project-tag">Learning</span>
@@ -332,12 +338,6 @@
     </main>
   </div>
 
-  <footer class="feet">
-    <div class="d-flex align-items-center justify-content-center">
-      <p class="p2 m-0 me-2">Designed with passion</p>
-      <img src="img/ic_computer.gif" height="45" width="45" alt="">
-    </div>
-  </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.cells.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>

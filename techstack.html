@@ -155,20 +155,16 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="navtext1 nav-link" href="about.html">About Me</a>
-            </li>
-            <li class="nav-item">
-              <a class="navtext1 nav-link" href="certifications.html">Certifications</a>
-            </li>
-            <li class="nav-item">
-              <a class="navtext1 nav-link" href="techstack.html">Tech Stack</a>
-            </li>
-            <li class="nav-item">
-              <a class="navtext1 nav-link" href="projects.html">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="navtext1 nav-link" href="contact.html">Contact</a>
+            <li class="nav-item dropdown pages-dropdown">
+              <button class="navtext1 nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="about.html">About Me</a></li>
+                <li><a class="dropdown-item" href="certifications.html">Certifications</a></li>
+                <li><a class="dropdown-item" href="techstack.html" aria-current="page">Tech Stack</a></li>
+                <li><a class="dropdown-item" href="projects.html">Projects</a></li>
+                <li><a class="dropdown-item" href="training.html">Training and Awards</a></li>
+                <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+              </ul>
             </li>
             <li class="nav-item theme-toggle-item">
               <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode" aria-pressed="true"><span data-theme-icon aria-hidden="true">☾</span><span>Dark mode</span></button>
@@ -181,75 +177,75 @@
       <h1 class="header1 mb-5">Tech Stack</h1>
       <div class="tech-container">
         <div class="row row-cols-2 g-4 justify-content-center align-items-center">
-          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="A powerful general-purpose programming language, widely used for system/software development.">
+          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="C is a foundational, procedural language that gives direct control over memory and hardware. I use it to understand core programming concepts, write efficient programs, and work close to the system level.">
             <img src="img/ic_c.png" width="60" height="60" alt="C">
             <p class="p2 text-center">C</p>
           </div>
-          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="An extension of C, supporting object-oriented programming and widely used for high-performance applications.">
+          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="C++ builds on C with object-oriented and generic programming features. It is useful for creating performance-focused software, organizing code into reusable components, and applying concepts such as classes, inheritance, and templates.">
             <img src="img/ic_c++.png" width="60" height="60" alt="C++">
             <p class="p2 text-center">C++</p>
           </div>
-          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="The standard markup language for creating web pages and web applications.">
+          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="HTML provides the structure and meaning of content on the web. I use semantic elements to organize page sections, text, links, images, and forms so browsers and assistive technologies can interpret them clearly.">
             <img src="img/ic_html.png" width="60" height="60" alt="HTML">
             <p class="p2 text-center">HTML</p>
           </div>
-          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="A style sheet language used for describing the look and formatting of web pages.">
+          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="CSS controls how web content looks and adapts to different screens. I use it to build layouts, set colors and typography, add transitions, and create responsive interfaces with tools such as Flexbox and Grid.">
             <img src="img/ic_css.png" width="60" height="60" alt="CSS">
             <p class="p2 text-center">CSS</p>
           </div>
-          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="A versatile scripting language for web development, enabling interactive and dynamic content.">
+          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="JavaScript adds behavior and interactivity to websites. I use it to respond to user actions, update page content, validate input, work with browser APIs, and connect interfaces to data and web services.">
             <img src="img/js_logo.png" width="60" height="60" alt="JavaScript">
             <p class="p2 text-center">JavaScript</p>
           </div>
-          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="A popular, platform-independent programming language used for building robust applications.">
+          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="Java is an object-oriented language that runs on a wide range of platforms through the Java Virtual Machine. Its classes, collections, and strong type system support structured application development and reusable code.">
             <img src="img/java_logo.jpg" width="60" height="60" alt="Java">
             <p class="p2 text-center">Java</p>
           </div>
-          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="The official IDE for Android app development, based on IntelliJ IDEA.">
+          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="Android Studio is the official integrated development environment for Android. It provides an editor, emulator, debugger, and build tools for designing, developing, and testing Android applications.">
             <img src="img/ic_astudio.png" width="60" height="60" alt="Android">
             <p class="p2 text-center">Android Studio</p>
           </div>
-          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="A distributed version control system for tracking changes in source code.">
+          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="Git tracks changes to files over time and supports branching and merging. I use it to maintain project history, experiment safely, compare revisions, and coordinate code changes with other contributors.">
             <img src="img/ic_git.png" width="60" height="60" alt="Git">
             <p class="p2 text-center">Git</p>
           </div>
-          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="A web-based platform for version control and collaborative software development.">
+          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="GitHub hosts Git repositories and adds tools for collaboration. I use it to publish projects, review changes through pull requests, track issues, and keep source code accessible across development environments.">
             <img src="img/ic_github.png" width="60" height="60" alt="GitHub">
             <p class="p2 text-center">GitHub</p>
           </div>
-          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="A high-level, interpreted programming language known for its readability and versatility.">
+          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="Python is a readable, general-purpose language with a broad ecosystem of libraries. I use it to write scripts, automate repetitive tasks, process data, and build application logic with clear, maintainable code.">
             <img src="img/python_logo.png" width="60" height="60" alt="Python">
             <p class="p2 text-center">Python</p>
           </div>
-          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="A popular open-source relational database management system.">
+          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="MySQL is a relational database that stores information in structured tables. I use SQL to define schemas, query and update records, connect related data, and support applications that need consistent persistent storage.">
             <img src="img/ic_sql.png" width="60" height="60" alt="MySQL">
             <p class="p2 text-center">MySQL</p>
           </div>
-          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="A document-oriented NoSQL database that stores data in flexible, JSON-like documents.">
+          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="MongoDB is a document database that stores records in flexible BSON documents. Its data model can represent nested information naturally, while queries and indexes help applications retrieve and manage records efficiently.">
             <img src="img/mongodb.svg" width="60" height="60" alt="MongoDB">
             <p class="p2 text-center">MongoDB</p>
           </div>
-          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="A platform with tools and services for building web and mobile applications.">
+          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="Firebase provides managed services for application development, including authentication, databases, storage, and hosting. These services help teams add common backend capabilities and connect client applications to cloud data.">
             <img src="img/firebase.svg" width="60" height="60" alt="Firebase">
             <p class="p2 text-center">Firebase</p>
           </div>
-          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="A JavaScript runtime for running server-side and command-line applications.">
+          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="Node.js runs JavaScript outside the browser using the V8 engine. I use its event-driven runtime and package ecosystem to build server-side features, command-line tools, and services that handle network requests.">
             <img src="img/nodejs.svg" width="60" height="60" alt="Node.js">
             <p class="p2 text-center">Node.js</p>
           </div>
-          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="A minimalist web framework for creating APIs and web servers with Node.js.">
+          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="Express is a lightweight web framework for Node.js. It organizes server behavior with routes and middleware, making it practical to handle HTTP requests, validate inputs, and build APIs and web applications.">
             <img src="img/express.svg" width="60" height="60" alt="Express">
             <p class="p2 text-center">Express</p>
           </div>
-          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="A cloud platform for deploying and hosting web applications and services.">
+          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="Render is a cloud platform for deploying websites, APIs, and background services. It can build applications from a connected repository, provide managed infrastructure, and publish updates through a repeatable deployment workflow.">
             <img src="img/render.svg" width="60" height="60" alt="Render">
             <p class="p2 text-center">Render</p>
           </div>
-          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="A programming language used to build client applications and server-side tools.">
+          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="Dart is a client-optimized language used with Flutter and also supports command-line and server-side programs. It includes sound null safety, asynchronous programming features, and a syntax suited to building maintainable applications.">
             <img src="img/dart.svg" width="60" height="60" alt="Dart">
             <p class="p2 text-center">Dart</p>
           </div>
-          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="A UI framework for building apps across mobile, web, and desktop.">
+          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="Flutter is a UI toolkit for building applications from a shared Dart codebase. Its widget system supports custom interfaces, while hot reload and a broad set of layout and interaction components help speed up development across mobile, web, and desktop.">
             <img src="img/flutter.svg" width="60" height="60" alt="Flutter">
             <p class="p2 text-center">Flutter</p>
           </div>
@@ -258,12 +254,6 @@
       </div>
     </div>
   </div>
-  <footer class="feet">
-    <div class="d-flex align-items-center justify-content-center">
-      <p class="p2 m-0 me-2">Designed with passion</p>
-      <img src="img/ic_computer.gif" height="45" width="45">
-    </div>
-  </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.cells.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>

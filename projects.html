@@ -43,15 +43,45 @@
       <section class="projects-grid text-start" aria-label="Project list">
         <article class="project-card project-featured">
           <h2>KLIR: An IoT-Based Toilet Sanitation, Analytics, and Predictive Maintenance Management System</h2>
-          <h3>Introduction</h3>
-          <p>Restroom sanitation is an important part of facility management because restrooms are shared spaces that are used repeatedly throughout the day. In educational institutions, the condition of these facilities affects hygiene, user comfort, public health, and the overall perception of campus services. Traditional restroom management usually depends on manual flushing, fixed cleaning schedules, and visual inspection. These methods can work for basic operations, but they do not provide a clear picture of actual usage, water consumption, device condition, or the exact time when cleaning attention is needed.</p>
+          <h3>Overview</h3>
+          <p>KLIR combines automated restroom hardware with a web-based operations and administration hub. The system is designed to keep the toilet’s local operating sequence available while the cloud services handle device monitoring, configuration, maintenance assignments, analytics, alerts, reporting, and remote administration. The application is being developed as a group Capstone 1 project at St. Dominic College of Asia.</p>
           <h3>Objectives</h3>
           <ul class="project-objectives">
-            <li>Automate the toilet lid and sensor-triggered flush cycle, followed by UV-C disinfection.</li>
-            <li>Monitor usage, flush activity, water consumption, and device status through a cloud dashboard.</li>
-            <li>Use maintenance counters and alerts to identify servicing needs early and reduce downtime.</li>
+            <li>Monitor restroom device status, flush activity, water use, and sanitation cycles in real time.</li>
+            <li>Support device configuration, alerting, analytics, and report or compliance document generation.</li>
+            <li>Coordinate maintenance tasks and staff while allowing the toilet hardware to continue its local sequence if cloud connectivity is unavailable.</li>
           </ul>
-          <div class="project-gallery" aria-label="KLIR project screenshots">
+          <h3>Role &amp; Contributions</h3>
+          <ul class="project-objectives">
+            <li>Systems analysis and design, feasibility study, and cost analysis.</li>
+            <li>Designed charts and contributed to the application’s UI/UX.</li>
+            <li>Prepared project documentation.</li>
+          </ul>
+          <p class="project-team"><strong>Project team:</strong> Christian Ivan A. Los Baños, Dennis V. Carlos, James Carl V. Alvarez, Justine M. Lopez, and Maria Rollainne R. Lindog.</p>
+          <p class="project-status">Status: In development.</p>
+          <h3>Technologies &amp; Components</h3>
+          <dl class="project-stack" aria-label="KLIR technologies and components">
+            <div><dt>Frontend</dt><dd>Next.js (React), TypeScript, Tailwind CSS, DaisyUI</dd></div>
+            <div><dt>State and data</dt><dd>Redux Toolkit, SWR caching</dd></div>
+            <div><dt>Forms and validation</dt><dd>React Hook Form, Zod</dd></div>
+            <div><dt>Analytics</dt><dd>Recharts for telemetry and water-use visualizations</dd></div>
+            <div><dt>Documents and QR</dt><dd>React-PDF for compliance exports, QR code generation</dd></div>
+            <div><dt>Cloud and database</dt><dd>Google Firebase: Cloud Firestore, Firebase Auth, Cloud Storage</dd></div>
+            <div><dt>IoT telemetry</dt><dd>Standalone Node.js <code>mqtt-listener</code> service connecting MQTT to Firebase</dd></div>
+            <div><dt>Hosting and deployment</dt><dd>Vercel for the frontend, Railway for the 24/7 MQTT ingestion daemon</dd></div>
+            <div><dt>Testing</dt><dd>Jest for unit and integration tests, Playwright for end-to-end tests</dd></div>
+          </dl>
+          <div class="project-gallery project-gallery-wide" aria-label="KLIR web application screenshots">
+            <figure>
+              <img src="img/klir-web-dashboard.jpeg" alt="KLIR system overview dashboard with restroom sensor readings, device connection status, activity feed, and device controls" loading="lazy">
+              <figcaption>Operations dashboard</figcaption>
+            </figure>
+            <figure>
+              <img src="img/klir-web-analytics.jpeg" alt="KLIR restroom analytics dashboard with flush totals, water usage, UV cleaning rate, and charts" loading="lazy">
+              <figcaption>Restroom analytics</figcaption>
+            </figure>
+          </div>
+          <div class="project-gallery" aria-label="Additional KLIR project screenshots">
             <figure>
               <img src="img/klir-development.png" alt="KLIR development workspace showing the restroom maintenance notes component" loading="lazy">
               <figcaption>Application development</figcaption>
@@ -80,6 +110,24 @@
             <li>Provide QR code user reporting so visitors can quickly report restroom issues or request attention.</li>
             <li>Automate toilet lid opening and closing, sensor-triggered flushing, and a UV-C disinfection cycle after use.</li>
           </ul>
+          <h3>Role &amp; Contributions</h3>
+          <ul class="project-objectives">
+            <li>Developed the frontend and designed the UI/UX.</li>
+            <li>Supported testing and evaluation, and presented the product demo at the exhibit.</li>
+            <li>Modified the hardware design.</li>
+          </ul>
+          <p class="project-team"><strong>Project team:</strong> Christian Ivan A. Los Baños, Dennis V. Carlos, James Carl V. Alvarez, Justine M. Lopez, and Maria Rollainne R. Lindog.</p>
+          <p class="project-status">Status: In development.</p>
+          <h3>Technologies &amp; Components</h3>
+          <div class="project-tags project-tech-tags" aria-label="KLIR IoT technologies and components">
+            <span class="project-tag">ESP32 / ESP8266</span>
+            <span class="project-tag">Ultrasonic sensors</span>
+            <span class="project-tag">Water flow sensors</span>
+            <span class="project-tag">UV-C</span>
+            <span class="project-tag">Servo motors</span>
+            <span class="project-tag">Relays</span>
+            <span class="project-tag">MQTT</span>
+          </div>
           <div class="project-gallery" aria-label="KLIR IoT device and exhibit photos">
             <figure>
               <img src="img/klir-iot-prototype.jpeg" alt="KLIR smart toilet prototype with its electronics and automated lid" loading="lazy">
@@ -103,36 +151,173 @@
         </article>
 
         <article class="project-card project-featured">
-          <h2>IntelliShield Analytics</h2>
-          <p>A fraud detection and risk intelligence platform combining rule-based checks, behavioral profiling, velocity analysis, and machine learning to help analysts investigate suspicious transactions.</p>
+          <h2>KLIR Mobile Application</h2>
+          <p>Built as part of a group Capstone 1 project at St. Dominic College of Asia during the second semester of our third year, the KLIR mobile app supports restroom facility technicians in handling maintenance work. Technicians can review assigned tasks, track active work, complete checklists, attach before-and-after photos, add remarks, and review their task history. The app is part of a developing system that pairs local toilet hardware with cloud-based monitoring, reporting, alerts, task dispatch, and remote administration.</p>
           <h3>Objectives</h3>
           <ul class="project-objectives">
-            <li>Combine deterministic rules, behavioral correlation, and machine learning to detect both obvious and stealthy fraud patterns.</li>
-            <li>Make risk assessments more explainable and support analyst review, feedback, and model retraining.</li>
-            <li>Provide practical fraud-analysis workflows while keeping the system efficient within Firebase free-tier limits.</li>
+            <li>Give technicians a mobile inbox for assigned tasks, task status, and priority or location details.</li>
+            <li>Guide technicians through an active maintenance task and let them record checklist results, photos, and remarks.</li>
+            <li>Keep a history of completed work while the wider platform supports remote monitoring, alerts, analytics, and task management.</li>
           </ul>
-          <div class="project-gallery" aria-label="IntelliShield Analytics screenshots">
+          <h3>Role &amp; Contributions</h3>
+          <ul class="project-objectives">
+            <li>Helped develop and refine the project concept.</li>
+            <li>Prepared project documentation, built frontend features, and assisted with backend development.</li>
+          </ul>
+          <h3>Technologies &amp; Components</h3>
+          <dl class="project-stack" aria-label="KLIR Mobile Application technologies and components">
+            <div><dt>Mobile framework</dt><dd>React Native with Expo, TypeScript</dd></div>
+            <div><dt>UI and navigation</dt><dd>React Native Paper (Material Design), React Navigation with role-based tabs and stack routing</dd></div>
+            <div><dt>Cloud and database</dt><dd>Google Firebase: Native Auth, Firestore, Cloud Storage</dd></div>
+            <div><dt>Push notifications</dt><dd>Firebase Cloud Messaging (FCM) for task dispatch and leak alerts</dd></div>
+            <div><dt>Offline storage</dt><dd>Async Storage for offline-first task synchronization in low-signal areas</dd></div>
+            <div><dt>Camera and media</dt><dd>Photo proof capture, compression, and timestamp watermarking</dd></div>
+            <div><dt>Biometrics</dt><dd>Fingerprint and Face ID authentication for audit approvals</dd></div>
+            <div><dt>Reporting</dt><dd>In-app PDF generation and system share sheet integration</dd></div>
+            <div><dt>Build and testing</dt><dd>EAS for APK builds, Jest, and Maestro end-to-end testing</dd></div>
+          </dl>
+          <p class="project-team"><strong>Project team:</strong> Christian Ivan A. Los Baños, Dennis V. Carlos, James Carl V. Alvarez, Justine M. Lopez, and Maria Rollainne R. Lindog.</p>
+          <p class="project-status">Status: In development.</p>
+          <div class="project-gallery project-gallery-mobile" aria-label="KLIR Mobile Application screenshots">
             <figure>
-              <img src="img/intellishield-home.png" alt="IntelliShield Analytics home page introducing its fraud detection features" loading="lazy">
-              <figcaption>Fraud detection overview</figcaption>
+              <img src="img/klir-mobile-inbox.jpeg" alt="KLIR mobile inbox showing today's maintenance task counts and task queue" loading="lazy">
+              <figcaption>Technician task inbox</figcaption>
             </figure>
             <figure>
-              <img src="img/intellishield-analytics.png" alt="IntelliShield Analytics dashboard with transaction totals and machine learning metrics" loading="lazy">
-              <figcaption>Analytics dashboard</figcaption>
+              <img src="img/klir-mobile-active-task.jpeg" alt="KLIR mobile active task showing restroom location, maintenance instructions, and assigned technician" loading="lazy">
+              <figcaption>Active maintenance task</figcaption>
             </figure>
             <figure>
-              <img src="img/intellishield-threat-intel.png" alt="IntelliShield threat intelligence page showing network and device velocity charts" loading="lazy">
-              <figcaption>Threat intelligence</figcaption>
+              <img src="img/klir-mobile-completion.jpeg" alt="KLIR mobile completion summary with before-and-after photos, checklist, and technician remarks" loading="lazy">
+              <figcaption>Task completion and verification</figcaption>
+            </figure>
+            <figure>
+              <img src="img/klir-mobile-profile.jpeg" alt="KLIR mobile technician profile showing role, facility assignment, and shift controls" loading="lazy">
+              <figcaption>Technician profile</figcaption>
             </figure>
           </div>
-          <div class="project-tags" aria-label="Technologies">
+        </article>
+
+        <article class="project-card project-featured">
+          <h2>IntelliShield Analytics</h2>
+          <p>Developed as my individual Capstone 1 research project, IntelliShield is a fraud monitoring and risk intelligence platform for importing transaction data and reviewing suspicious activity. Administrators can upload CSV datasets, inspect individual transactions alongside rule risk scores and model fraud probabilities, and compare fraud and legitimate transaction totals. The application combines rule-based checks, behavioral profiling, device and IP velocity signals, Gaussian anomaly analysis, logistic regression, and a neural network to help surface both straightforward and less obvious fraud patterns.</p>
+          <p>Analytics views summarize model metrics, transaction distributions, fraud triggers, and model performance across training batches. Admins can retrain models with labeled Firestore records, subject to data requirements, while system monitoring tracks upload activity, errors, and accuracy over time. The audit trail records administrative and data-management events and supports date filtering, CSV/PDF export, and printing. Role-based access separates security analyst and administrator capabilities, with user management and audit logging supporting oversight.</p>
+          <h3>Objectives</h3>
+          <ul class="project-objectives">
+            <li>Import transaction datasets and combine rule-based risk checks with machine learning to flag suspicious activity.</li>
+            <li>Help analysts investigate patterns through transaction-level risk details, model metrics, threat charts, and batch comparisons.</li>
+            <li>Support labeled-data review and controlled model retraining while monitoring system errors, uploads, and model performance.</li>
+            <li>Provide auditable, role-based administration with exportable records for operational review and reporting.</li>
+          </ul>
+          <p class="project-status">Status: Further testing and system updates.</p>
+          <h3>Role &amp; Contributions</h3>
+          <ul class="project-objectives">
+            <li>Full-stack development, systems analysis, application design, and UI/UX.</li>
+            <li>Managed database design and usage, with a focus on Firebase free-tier optimization.</li>
+            <li>Designed role-based access control (RBAC) and audit modules.</li>
+            <li>Developed stealth-fraud detection logic.</li>
+          </ul>
+          <h3>Technologies &amp; Components</h3>
+          <div class="project-tags project-tech-tags" aria-label="IntelliShield technologies and components">
             <span class="project-tag">Next.js</span>
-            <span class="project-tag">Firebase Firestore</span>
+            <span class="project-tag">Firebase Authentication</span>
+            <span class="project-tag">Cloud Firestore</span>
             <span class="project-tag">TensorFlow.js</span>
             <span class="project-tag">Chart.js</span>
-            <span class="project-tag">Fraud detection</span>
+            <span class="project-tag">ML risk scoring</span>
+            <span class="project-tag">Velocity analysis</span>
+            <span class="project-tag">Behavioral profiling</span>
+            <span class="project-tag">RBAC &amp; audit logs</span>
+          </div>
+          <div class="project-gallery" aria-label="IntelliShield Analytics application screenshots">
+            <figure>
+              <img src="img/intellishield-dashboard.png" alt="IntelliShield dashboard with CSV upload, transaction totals, and model analytics" loading="lazy">
+              <figcaption>Fraud monitoring dashboard</figcaption>
+            </figure>
+            <figure>
+              <img src="img/intellishield-transactions.png" alt="IntelliShield transaction list with fraud scores and CSV or PDF report export controls" loading="lazy">
+              <figcaption>Transaction review and report export</figcaption>
+            </figure>
+            <figure>
+              <img src="img/intellishield-analytics.png" alt="IntelliShield analytics dashboard with transaction counts and model metrics" loading="lazy">
+              <figcaption>Fraud analytics</figcaption>
+            </figure>
+            <figure>
+              <img src="img/intellishield-threat-intel.png" alt="IntelliShield threat intelligence charts for device and IP velocity, fraud triggers, and anomaly detection" loading="lazy">
+              <figcaption>Threat intelligence</figcaption>
+            </figure>
+            <figure>
+              <img src="img/intellishield-monitoring.png" alt="IntelliShield system monitoring with upload totals, errors, model accuracy, and performance trends" loading="lazy">
+              <figcaption>System monitoring</figcaption>
+            </figure>
+            <figure>
+              <img src="img/intellishield-monitoring-history.png" alt="IntelliShield monitoring history charts and model performance records" loading="lazy">
+              <figcaption>Monitoring history</figcaption>
+            </figure>
+            <figure>
+              <img src="img/intellishield-audit-trail.png" alt="IntelliShield system audit trail showing recorded administrative actions" loading="lazy">
+              <figcaption>System audit trail</figcaption>
+            </figure>
+            <figure>
+              <img src="img/intellishield-retraining-reports.png" alt="IntelliShield model retraining controls and report export options" loading="lazy">
+              <figcaption>Model retraining and reports</figcaption>
+            </figure>
           </div>
           <a class="project-link-label" href="https://intellishield.vercel.app/" target="_blank" rel="noopener noreferrer">Open IntelliShield Analytics ↗</a>
+        </article>
+
+        <article class="project-card project-featured">
+          <h2>Unicom Technologies Website and Customer Portal</h2>
+          <p>A web application for Unicom Technologies, an IT systems supplier serving individuals and small to medium-sized businesses. The site brings its product catalog, systems integration and data center services, customer sign-in, and technical support information into one place.</p>
+          <h3>Application Highlights</h3>
+          <ul class="project-objectives">
+            <li>Introduce the company and its computer hardware, software, and IT solutions.</li>
+            <li>Present services including systems integration, data center installation, infrastructure assessment, and technical support.</li>
+            <li>Provide customer account access alongside support contact details and answers to common questions.</li>
+          </ul>
+          <p class="project-status">Status: In development.</p>
+          <h3>Role &amp; Contributions</h3>
+          <ul class="project-objectives">
+            <li>Systems design and development, UI/UX, and functional testing.</li>
+            <li>Modified the application based on testing and prepared project documentation.</li>
+          </ul>
+          <h3>Technologies &amp; Components</h3>
+          <div class="project-tags project-tech-tags" aria-label="Unicom Technologies project tools">
+            <span class="project-tag">Web application</span>
+            <span class="project-tag">Frontend</span>
+            <span class="project-tag">Backend</span>
+            <span class="project-tag">Databases</span>
+            <span class="project-tag">RBAC</span>
+          </div>
+          <div class="project-gallery" aria-label="Unicom Technologies application screenshots">
+            <figure>
+              <img src="img/unicom-home.png" alt="Unicom Technologies homepage introducing its electronics and IT solutions" loading="lazy">
+              <figcaption>Homepage</figcaption>
+            </figure>
+            <figure>
+              <img src="img/unicom-services.png" alt="Unicom Technologies services page listing systems integration and IT services" loading="lazy">
+              <figcaption>IT services</figcaption>
+            </figure>
+            <figure>
+              <img src="img/unicom-support.png" alt="Unicom Technologies technical support page with contact information and FAQs" loading="lazy">
+              <figcaption>Technical support</figcaption>
+            </figure>
+            <figure>
+              <img src="img/unicom-about.png" alt="Unicom Technologies about page with company background, mission, and values" loading="lazy">
+              <figcaption>Company profile</figcaption>
+            </figure>
+            <figure>
+              <img src="img/unicom-login.png" alt="Unicom Technologies customer login screen" loading="lazy">
+              <figcaption>Customer sign-in</figcaption>
+            </figure>
+          </div>
+          <div class="project-tags" aria-label="Application features">
+            <span class="project-tag">IT solutions</span>
+            <span class="project-tag">Product catalog</span>
+            <span class="project-tag">Customer portal</span>
+            <span class="project-tag">Technical support</span>
+          </div>
+          <a class="project-link-label" href="https://unicomtechnologies.vercel.app/" target="_blank" rel="noopener noreferrer">Open Unicom Technologies ↗</a>
         </article>
 
         <article class="project-card project-coming-soon">

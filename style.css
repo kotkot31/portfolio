@@ -217,7 +217,10 @@ body.about-page .about .p2 {
 }
 
 #about-learning,
-#about-building,
+#about-building {
+  scroll-margin-top: 3.7rem;
+}
+
 #about-headed {
   scroll-margin-top: 1rem;
 }

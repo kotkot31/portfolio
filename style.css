@@ -92,6 +92,28 @@ body.contact-page #vanta-bg canvas {
   opacity: 0.1 !important;
 }
 
+body.about-page #vanta-bg {
+  background-image:
+    linear-gradient(rgba(8, 18, 34, 0.48), rgba(8, 18, 34, 0.58)),
+    url("img/about-sunset-background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+body.about-page #vanta-bg canvas {
+  opacity: 0.08 !important;
+}
+
+body.about-page .about .header1 {
+  color: var(--accent);
+}
+
+body.about-page .about .p2 {
+  color: #e7edf2;
+}
+
 body.home-page #vanta-bg canvas {
   opacity: 0.1 !important;
 }
@@ -106,6 +128,16 @@ body.home-page #vanta-bg canvas {
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.38), rgba(255, 255, 255, 0.48)),
     url("img/home-it-background.jpg");
+}
+
+:root[data-theme="light"] body.about-page #vanta-bg {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.46), rgba(255, 255, 255, 0.56)),
+    url("img/about-sunset-background.png");
+}
+
+:root[data-theme="light"] body.about-page .about .p2 {
+  color: #354456;
 }
 
 #vanta-bg canvas {

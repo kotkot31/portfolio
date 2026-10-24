@@ -788,6 +788,7 @@ body.contact-page #vanta-bg canvas {
   justify-self: center;
   margin: 0;
   padding: 1.25rem;
+  background: rgba(15, 23, 42, 0.20);
   text-align: center;
   cursor: pointer;
 }
@@ -806,7 +807,12 @@ body.contact-page #vanta-bg canvas {
   -webkit-backdrop-filter: blur(6px) saturate(1.25);
 }
 
-.tech-card:hover,
+.tech-card:hover {
+  transform: translateY(-5px);
+  background: rgba(30, 41, 59, 0.30);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.2);
+}
+
 .contact-card:hover {
   transform: translateY(-5px);
   background: var(--surface-hover);
@@ -1330,14 +1336,22 @@ a.project-card:focus-visible {
   border-radius: 14px;
 }
 
-:root[data-theme="light"] .tech-card,
+:root[data-theme="light"] .tech-card {
+  background: rgba(203, 213, 225, 0.22) !important;
+  border-color: var(--border) !important;
+  box-shadow: 0 12px 30px rgba(27, 39, 57, 0.08) !important;
+}
+
 :root[data-theme="light"] .contact-card {
   background: var(--surface) !important;
   border-color: var(--border) !important;
   box-shadow: 0 12px 30px rgba(27, 39, 57, 0.08) !important;
 }
 
-:root[data-theme="light"] .tech-card:hover,
+:root[data-theme="light"] .tech-card:hover {
+  background: rgba(203, 213, 225, 0.32) !important;
+}
+
 :root[data-theme="light"] .contact-card:hover {
   background: var(--surface-hover) !important;
 }

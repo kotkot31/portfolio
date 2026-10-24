@@ -13,161 +13,29 @@
     rel="stylesheet"
   >
   <link href="style.css" rel="stylesheet">
-  <style>
-    .tech-tooltip {
-      position: absolute;
-      z-index: 1000;
-      background: rgba(40, 40, 60, 0.32); /* glassy dark background */
-      color: #fff;
-      border-radius: 18px;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.18), 0 1.5px 8px rgba(0,0,0,0.10);
-      padding: 18px 24px 16px 24px;
-      font-size: 1.08rem;
-      max-width: 260px;
-      pointer-events: none;
-      opacity: 0;
-      transition: opacity 0.18s, box-shadow 0.18s;
-      border: 1.5px solid rgba(255,255,255,0.18);
-      backdrop-filter: blur(10px) saturate(1.5);
-      font-family: 'Segoe UI', 'Arial', sans-serif;
-      font-weight: 500;
-      letter-spacing: 0.01em;
-      text-shadow: 0 1px 6px rgba(0,0,0,0.25), 0 0px 1px #222;
-    }
-    .tech-tooltip::after {
-      content: '';
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-      border-width: 12px 12px 0 12px;
-      border-style: solid;
-      border-color: rgba(40, 40, 60, 0.32) transparent transparent transparent;
-      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.10));
-      backdrop-filter: blur(10px) saturate(1.5);
-    }
-    @media (max-width: 900px) {
-      .d-flex.flex-wrap.justify-content-center.align-items-center {
-        flex-wrap: wrap;
-        gap: 50px 0; /* much more vertical gap between rows */
-      }
-      .tech-card {
-        width: 46%;
-        max-width: 46%;
-        min-width: 120px;
-        margin: 0 2.5%; /* remove extra top/bottom margin, only for my  horizontal cards */
-        box-sizing: border-box;
-      }
-    }
-    @media (max-width: 600px) {
-      .row.row-cols-2 {
-        --bs-columns: 2;
-      }
-      .col {
-        flex: 0 0 auto;
-        width: 50%;
-        max-width: 50%;
-        min-width: 0;
-        margin: 0;
-        box-sizing: border-box;
-      }
-    }
-    @media (max-width: 400px) {
-      .d-flex.flex-wrap.justify-content-center.align-items-center {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: none;
-        gap: 58px 0;
-      }
-      .tech-card {
-        width: 100%;
-        max-width: 100%;
-        min-width: 100px;
-        margin: 0 0; /* no extra margin, spacing only from gap */
-      }
-      .d-flex.flex-wrap.justify-content-center.align-items-center {
-        gap: 68px 0; /* much more vertical gap between rows */
-      }
-    }
-    /* Remove background and border for a transparent, visually appealing look on all tech stack logos */
-    .tech-card img {
-      background: rgba(40, 40, 60, 0.32);
-      border-radius: 16px;
-      border: 1.5px solid rgba(255,255,255,0.18);
-      box-shadow: 0 4px 16px rgba(0,0,0,0.10), 0 1.5px 8px rgba(0,0,0,0.10);
-      backdrop-filter: blur(8px) saturate(1.5);
-      padding: 6px;
-      transition: box-shadow 0.18s, background 0.18s;
-    }
-    /* Making my tech stack card backgrounds more glassy and transparent */
-    .tech-card {
-      background: rgba(40, 40, 60, 0.16); /* more transparent */
-      border-radius: 22px;
-      border: 1.5px solid rgba(255,255,255,0.14);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.10), 0 1.5px 8px rgba(0,0,0,0.08);
-      backdrop-filter: blur(3px) saturate(1.3); /* adjusted code to a more transparent blur */
-      -webkit-backdrop-filter: blur(3px) saturate(1.3);
-      transition: box-shadow 0.18s, background 0.18s;
-    }
-    /* Remove custom grid/flex CSS for .d-flex.flex-wrap.justify-content-center.align-items-center on <=600px */
-    @media (max-width: 600px) {
-      .row.row-cols-2 {
-        --bs-columns: 2;
-      }
-      .col {
-        flex: 0 0 auto;
-        width: 50%;
-        max-width: 50%;
-        min-width: 0;
-        margin: 0;
-        box-sizing: border-box;
-      }
-    }
-    /* Remove  my conflicting custom grid/flex settings for .d-flex.flex-wrap.justify-content-center.align-items-center */
-    .d-flex.flex-wrap.justify-content-center.align-items-center {
-      display: flex !important;
-      flex-wrap: wrap !important;
-      gap: 0 !important;
-    }
-    /* Force 2 columns per row for tablets/foldables (iPad Mini, iPad Air, Zenbook Fold, etc.) */
-    @media (min-width: 601px) and (max-width: 1200px) {
-      .row.row-cols-2 {
-        --bs-columns: 2;
-      }
-      .col {
-        flex: 0 0 auto;
-        width: 50%;
-        max-width: 50%;
-        min-width: 0;
-        margin: 0;
-        box-sizing: border-box;
-      }
-    }
-  </style>
 </head>
 <body class="techstack-page">
   <div id="vanta-bg">
     <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <a class="navtext1 navbar-brand" href="index.html">Home</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <a class="navtext1 navbar-brand home-icon-link" href="index.html" aria-label="Home" title="Home">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7"/><path d="M5 9v11h14V9M9 20v-7h6v7"/></svg>
+        </a>
+        <div class="navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item dropdown pages-dropdown">
-              <button class="navtext1 nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Pages</button>
+              <button class="navtext1 nav-link dropdown-toggle pages-icon-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Pages" title="Pages"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"/></svg></button>
               <ul class="dropdown-menu dropdown-menu-end">
-                <li><a class="dropdown-item" href="about.html">About Me</a></li>
-                <li><a class="dropdown-item" href="certifications.html">Certifications</a></li>
-                <li><a class="dropdown-item" href="techstack.html" aria-current="page">Tech Stack</a></li>
-                <li><a class="dropdown-item" href="projects.html">Projects</a></li>
-                <li><a class="dropdown-item" href="training.html">Training and Awards</a></li>
-                <li><a class="dropdown-item" href="contact.html">Contact</a></li>
+                <li><a class="dropdown-item" href="about.html"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></svg><span>About Me</span></a></li>
+                <li><a class="dropdown-item" href="certifications.html"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 14.8 5l3.4.2.2 3.4L20.5 12l-2.1 2.8-.2 3.4-3.4.2L12 20.5l-2.8-2.1-3.4-.2-.2-3.4L3.5 12l2.1-2.8.2-3.4 3.4-.2z"/><path d="m9 12 2 2 4-4"/></svg><span>Certifications</span></a></li>
+                <li><a class="dropdown-item" href="techstack.html" aria-current="page"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg><span>Tech Stack</span></a></li>
+                <li><a class="dropdown-item" href="projects.html"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18M10 12v2h4v-2"/></svg><span>Projects</span></a></li>
+                <li><a class="dropdown-item" href="training.html"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4h8v5a4 4 0 0 1-8 0zM8 6H5v2a4 4 0 0 0 4 4M16 6h3v2a4 4 0 0 1-4 4M12 13v5M8 21h8M10 18h4"/></svg><span>Training and Awards</span></a></li>
+                <li><a class="dropdown-item" href="contact.html"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg><span>Contact</span></a></li>
               </ul>
             </li>
             <li class="nav-item theme-toggle-item">
-              <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode" aria-pressed="true"><span data-theme-icon aria-hidden="true">☾</span><span>Dark mode</span></button>
+              <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode" aria-pressed="true"><span data-theme-icon aria-hidden="true">☾</span><span>Theme</span></button>
             </li>
           </ul>
         </div>
@@ -176,81 +44,80 @@
     <div class="tech d-block mt-5 text-center">
       <h1 class="header1 mb-5">Tech Stack</h1>
       <div class="tech-container">
-        <div class="row row-cols-2 g-4 justify-content-center align-items-center">
-          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="C is a foundational, procedural language that gives direct control over memory and hardware. I use it to understand core programming concepts, write efficient programs, and work close to the system level.">
+        <div class="tech-grid">
+          <div class="tech-card" data-tooltip="C is a foundational, procedural language that gives direct control over memory and hardware. I use it to understand core programming concepts, write efficient programs, and work close to the system level.">
             <img src="img/ic_c.png" width="60" height="60" alt="C">
             <p class="p2 text-center">C</p>
           </div>
-          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="C++ builds on C with object-oriented and generic programming features. It is useful for creating performance-focused software, organizing code into reusable components, and applying concepts such as classes, inheritance, and templates.">
+          <div class="tech-card" data-tooltip="C++ builds on C with object-oriented and generic programming features. It is useful for creating performance-focused software, organizing code into reusable components, and applying concepts such as classes, inheritance, and templates.">
             <img src="img/ic_c++.png" width="60" height="60" alt="C++">
             <p class="p2 text-center">C++</p>
           </div>
-          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="HTML provides the structure and meaning of content on the web. I use semantic elements to organize page sections, text, links, images, and forms so browsers and assistive technologies can interpret them clearly.">
+          <div class="tech-card" data-tooltip="HTML provides the structure and meaning of content on the web. I use semantic elements to organize page sections, text, links, images, and forms so browsers and assistive technologies can interpret them clearly.">
             <img src="img/ic_html.png" width="60" height="60" alt="HTML">
             <p class="p2 text-center">HTML</p>
           </div>
-          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="CSS controls how web content looks and adapts to different screens. I use it to build layouts, set colors and typography, add transitions, and create responsive interfaces with tools such as Flexbox and Grid.">
+          <div class="tech-card" data-tooltip="CSS controls how web content looks and adapts to different screens. I use it to build layouts, set colors and typography, add transitions, and create responsive interfaces with tools such as Flexbox and Grid.">
             <img src="img/ic_css.png" width="60" height="60" alt="CSS">
             <p class="p2 text-center">CSS</p>
           </div>
-          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="JavaScript adds behavior and interactivity to websites. I use it to respond to user actions, update page content, validate input, work with browser APIs, and connect interfaces to data and web services.">
+          <div class="tech-card" data-tooltip="JavaScript adds behavior and interactivity to websites. I use it to respond to user actions, update page content, validate input, work with browser APIs, and connect interfaces to data and web services.">
             <img src="img/js_logo.png" width="60" height="60" alt="JavaScript">
             <p class="p2 text-center">JavaScript</p>
           </div>
-          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="Java is an object-oriented language that runs on a wide range of platforms through the Java Virtual Machine. Its classes, collections, and strong type system support structured application development and reusable code.">
+          <div class="tech-card" data-tooltip="Java is an object-oriented language that runs on a wide range of platforms through the Java Virtual Machine. Its classes, collections, and strong type system support structured application development and reusable code.">
             <img src="img/java_logo.jpg" width="60" height="60" alt="Java">
             <p class="p2 text-center">Java</p>
           </div>
-          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="Android Studio is the official integrated development environment for Android. It provides an editor, emulator, debugger, and build tools for designing, developing, and testing Android applications.">
+          <div class="tech-card" data-tooltip="Android Studio is the official integrated development environment for Android. It provides an editor, emulator, debugger, and build tools for designing, developing, and testing Android applications.">
             <img src="img/ic_astudio.png" width="60" height="60" alt="Android">
             <p class="p2 text-center">Android Studio</p>
           </div>
-          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="Git tracks changes to files over time and supports branching and merging. I use it to maintain project history, experiment safely, compare revisions, and coordinate code changes with other contributors.">
+          <div class="tech-card" data-tooltip="Git tracks changes to files over time and supports branching and merging. I use it to maintain project history, experiment safely, compare revisions, and coordinate code changes with other contributors.">
             <img src="img/ic_git.png" width="60" height="60" alt="Git">
             <p class="p2 text-center">Git</p>
           </div>
-          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="GitHub hosts Git repositories and adds tools for collaboration. I use it to publish projects, review changes through pull requests, track issues, and keep source code accessible across development environments.">
+          <div class="tech-card" data-tooltip="GitHub hosts Git repositories and adds tools for collaboration. I use it to publish projects, review changes through pull requests, track issues, and keep source code accessible across development environments.">
             <img src="img/ic_github.png" width="60" height="60" alt="GitHub">
             <p class="p2 text-center">GitHub</p>
           </div>
-          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="Python is a readable, general-purpose language with a broad ecosystem of libraries. I use it to write scripts, automate repetitive tasks, process data, and build application logic with clear, maintainable code.">
+          <div class="tech-card" data-tooltip="Python is a readable, general-purpose language with a broad ecosystem of libraries. I use it to write scripts, automate repetitive tasks, process data, and build application logic with clear, maintainable code.">
             <img src="img/python_logo.png" width="60" height="60" alt="Python">
             <p class="p2 text-center">Python</p>
           </div>
-          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="MySQL is a relational database that stores information in structured tables. I use SQL to define schemas, query and update records, connect related data, and support applications that need consistent persistent storage.">
+          <div class="tech-card" data-tooltip="MySQL is a relational database that stores information in structured tables. I use SQL to define schemas, query and update records, connect related data, and support applications that need consistent persistent storage.">
             <img src="img/ic_sql.png" width="60" height="60" alt="MySQL">
             <p class="p2 text-center">MySQL</p>
           </div>
-          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="MongoDB is a document database that stores records in flexible BSON documents. Its data model can represent nested information naturally, while queries and indexes help applications retrieve and manage records efficiently.">
+          <div class="tech-card" data-tooltip="MongoDB is a document database that stores records in flexible BSON documents. Its data model can represent nested information naturally, while queries and indexes help applications retrieve and manage records efficiently.">
             <img src="img/mongodb.svg" width="60" height="60" alt="MongoDB">
             <p class="p2 text-center">MongoDB</p>
           </div>
-          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="Firebase provides managed services for application development, including authentication, databases, storage, and hosting. These services help teams add common backend capabilities and connect client applications to cloud data.">
+          <div class="tech-card" data-tooltip="Firebase provides managed services for application development, including authentication, databases, storage, and hosting. These services help teams add common backend capabilities and connect client applications to cloud data.">
             <img src="img/firebase.svg" width="60" height="60" alt="Firebase">
             <p class="p2 text-center">Firebase</p>
           </div>
-          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="Node.js runs JavaScript outside the browser using the V8 engine. I use its event-driven runtime and package ecosystem to build server-side features, command-line tools, and services that handle network requests.">
+          <div class="tech-card" data-tooltip="Node.js runs JavaScript outside the browser using the V8 engine. I use its event-driven runtime and package ecosystem to build server-side features, command-line tools, and services that handle network requests.">
             <img src="img/nodejs.svg" width="60" height="60" alt="Node.js">
             <p class="p2 text-center">Node.js</p>
           </div>
-          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="Express is a lightweight web framework for Node.js. It organizes server behavior with routes and middleware, making it practical to handle HTTP requests, validate inputs, and build APIs and web applications.">
+          <div class="tech-card" data-tooltip="Express is a lightweight web framework for Node.js. It organizes server behavior with routes and middleware, making it practical to handle HTTP requests, validate inputs, and build APIs and web applications.">
             <img src="img/express.svg" width="60" height="60" alt="Express">
             <p class="p2 text-center">Express</p>
           </div>
-          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="Render is a cloud platform for deploying websites, APIs, and background services. It can build applications from a connected repository, provide managed infrastructure, and publish updates through a repeatable deployment workflow.">
+          <div class="tech-card" data-tooltip="Render is a cloud platform for deploying websites, APIs, and background services. It can build applications from a connected repository, provide managed infrastructure, and publish updates through a repeatable deployment workflow.">
             <img src="img/render.svg" width="60" height="60" alt="Render">
             <p class="p2 text-center">Render</p>
           </div>
-          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="Dart is a client-optimized language used with Flutter and also supports command-line and server-side programs. It includes sound null safety, asynchronous programming features, and a syntax suited to building maintainable applications.">
+          <div class="tech-card" data-tooltip="Dart is a client-optimized language used with Flutter and also supports command-line and server-side programs. It includes sound null safety, asynchronous programming features, and a syntax suited to building maintainable applications.">
             <img src="img/dart.svg" width="60" height="60" alt="Dart">
             <p class="p2 text-center">Dart</p>
           </div>
-          <div class="col d-flex flex-column align-items-center justify-content-center tech-card" data-tooltip="Flutter is a UI toolkit for building applications from a shared Dart codebase. Its widget system supports custom interfaces, while hot reload and a broad set of layout and interaction components help speed up development across mobile, web, and desktop.">
+          <div class="tech-card" data-tooltip="Flutter is a UI toolkit for building applications from a shared Dart codebase. Its widget system supports custom interfaces, while hot reload and a broad set of layout and interaction components help speed up development across mobile, web, and desktop.">
             <img src="img/flutter.svg" width="60" height="60" alt="Flutter">
             <p class="p2 text-center">Flutter</p>
           </div>
         </div>
-        <p><br><br><br></p>
       </div>
     </div>
   </div>
@@ -264,40 +131,58 @@
       // Custom tech card tooltip logic
       const tooltip = document.createElement('div');
       tooltip.className = 'tech-tooltip';
+      tooltip.id = 'tech-tooltip';
+      tooltip.setAttribute('role', 'tooltip');
       document.body.appendChild(tooltip);
       let activeCard = null;
+      function positionTooltip(card) {
+        const rect = card.getBoundingClientRect();
+        const navbar = document.querySelector('.navbar');
+        const navbarBottom = navbar ? navbar.getBoundingClientRect().bottom : 0;
+        const gap = 16;
+        let top = rect.top - tooltip.offsetHeight - gap;
+
+        // Place the description below the card whenever its usual position
+        // would collide with the sticky navigation.
+        if (top < navbarBottom + gap) {
+          top = rect.bottom + gap;
+        }
+
+        const left = Math.max(8, Math.min(
+          rect.left + rect.width / 2 - tooltip.offsetWidth / 2,
+          window.innerWidth - tooltip.offsetWidth - 8
+        ));
+        tooltip.style.left = (left + window.scrollX) + 'px';
+        tooltip.style.top = (top + window.scrollY) + 'px';
+      }
+      function showTooltip(card) {
+        activeCard = card;
+        tooltip.textContent = card.getAttribute('data-tooltip');
+        card.setAttribute('aria-describedby', tooltip.id);
+        positionTooltip(card);
+        tooltip.style.opacity = 1;
+        window.requestAnimationFrame(function() {
+          if (activeCard === card) positionTooltip(card);
+        });
+      }
+      function hideTooltip(card) {
+        if (activeCard !== card || document.activeElement === card || card.matches(':hover')) return;
+        tooltip.style.opacity = 0;
+        activeCard = null;
+      }
       document.querySelectorAll('.tech-card[data-tooltip]').forEach(card => {
-        card.addEventListener('mouseenter', function(e) {
-          activeCard = card;
-          tooltip.textContent = card.getAttribute('data-tooltip');
-          const rect = card.getBoundingClientRect();
-          tooltip.style.left = (rect.left + rect.width/2 - tooltip.offsetWidth/2) + 'px';
-          tooltip.style.top = (rect.top - tooltip.offsetHeight - 16 + window.scrollY) + 'px';
-          tooltip.style.opacity = 1;
-          // Reposition after content set
-          setTimeout(function() {
-            const rect = card.getBoundingClientRect();
-            tooltip.style.left = (rect.left + rect.width/2 - tooltip.offsetWidth/2) + 'px';
-            tooltip.style.top = (rect.top - tooltip.offsetHeight - 16 + window.scrollY) + 'px';
-          }, 10);
-        });
-        card.addEventListener('mousemove', function(e) {
-          const rect = card.getBoundingClientRect();
-          tooltip.style.left = (rect.left + rect.width/2 - tooltip.offsetWidth/2) + 'px';
-          tooltip.style.top = (rect.top - tooltip.offsetHeight - 16 + window.scrollY) + 'px';
-        });
-        card.addEventListener('mouseleave', function() {
-          tooltip.style.opacity = 0;
-          activeCard = null;
-        });
+        card.tabIndex = 0;
+        card.addEventListener('mouseenter', () => showTooltip(card));
+        card.addEventListener('focus', () => showTooltip(card));
+        card.addEventListener('mousemove', () => positionTooltip(card));
+        card.addEventListener('mouseleave', () => hideTooltip(card));
+        card.addEventListener('blur', () => hideTooltip(card));
       });
       window.addEventListener('scroll', function() {
         if (activeCard) {
-          const rect = activeCard.getBoundingClientRect();
-          tooltip.style.left = (rect.left + rect.width/2 - tooltip.offsetWidth/2) + 'px';
-          tooltip.style.top = (rect.top - tooltip.offsetHeight - 16 + window.scrollY) + 'px';
+          positionTooltip(activeCard);
         }
-      });
+      }, { passive: true });
     });
   </script>
 </body>

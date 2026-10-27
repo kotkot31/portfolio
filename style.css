@@ -807,6 +807,23 @@ body.contact-page #vanta-bg canvas {
   -webkit-backdrop-filter: blur(6px) saturate(1.25);
 }
 
+.tech-card-mark {
+  display: grid;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+  place-items: center;
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  background: linear-gradient(145deg, #2563a6, #17365f);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
 .tech-card:hover {
   transform: translateY(-5px);
   background: rgba(30, 41, 59, 0.30);

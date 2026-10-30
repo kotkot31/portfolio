@@ -61,12 +61,12 @@ if (window.VANTA && typeof window.VANTA.CELLS === "function") {
 if (window.Typed && document.querySelector("#typed-output")) {
   new Typed('#typed-output', {
     strings: [
-      "Hi there!",
-      "I like creating responsive website.",
-      "Very passionate about design and coding.",
-      "Interested?",
-      "Feel free to reach me out.",
-      "Thanks for visiting my site.",
+      "Hi there! Welcome to my site",
+      "I like creating responsive systems.",
+      "and very interested about design and coding.",
+      "if you need to collaborate on a project,",
+      "feel free to reach me out.",
+      "take care and see you soon!",
     ],
     typeSpeed: 40,
     backSpeed: 25,

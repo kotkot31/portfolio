@@ -125,7 +125,7 @@ body.certifications-page #vanta-bg canvas {
 body.training-page #vanta-bg {
   background-image:
     linear-gradient(rgba(8, 18, 34, 0.46), rgba(8, 18, 34, 0.56)),
-    url("img/training-background.png");
+    url("img/training-background.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -258,7 +258,7 @@ body.contact-page #vanta-bg canvas {
 :root[data-theme="light"] body.training-page #vanta-bg {
   background-image:
     linear-gradient(rgba(243, 246, 251, 0.24), rgba(243, 246, 251, 0.34)),
-    url("img/training-background.png");
+    url("img/training-background.jpg");
 }
 
 :root[data-theme="light"] body.techstack-page #vanta-bg {

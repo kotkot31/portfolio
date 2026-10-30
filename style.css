@@ -529,6 +529,7 @@ body.contact-page #vanta-bg canvas {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.55rem;
   min-height: 46px;
   padding: 0.7rem 1.15rem;
   color: #fff;
@@ -567,9 +568,9 @@ body.contact-page #vanta-bg canvas {
 }
 
 .home-button-primary {
-  color: #101827;
-  background: var(--accent);
-  border-color: var(--accent);
+  color: #fff;
+  background: var(--navbar-bg);
+  border-color: #93c5fd;
 }
 
 .home-button-primary.home-icon-button {
@@ -583,17 +584,17 @@ body.contact-page #vanta-bg canvas {
 
 .home-button-primary:hover,
 .home-button-primary:focus-visible {
-  color: #101827;
-  background: var(--accent-hover);
-}
-
-.home-button-primary.home-icon-button:hover,
-.home-button-primary.home-icon-button:focus-visible,
-.home-button-primary.home-icon-button:active {
   color: #fff;
   background: var(--navbar-bg);
   border-color: #c4b5fd;
   box-shadow: 0 0 8px rgba(167, 139, 250, 0.8), inset 0 0 5px rgba(167, 139, 250, 0.18);
+}
+
+.home-button-primary:active {
+  color: #fff;
+  background: var(--navbar-bg);
+  border-color: #c4b5fd;
+  box-shadow: 0 0 12px rgba(167, 139, 250, 0.95), inset 0 0 6px rgba(167, 139, 250, 0.24);
 }
 
 .home-connect-button {
@@ -1490,8 +1491,26 @@ a.project-video-button:not([disabled]):hover {
   animation: contact-popup-enter 0.4s ease both;
 }
 
-:root[data-theme="light"] .home-button-primary.home-icon-button {
-  box-shadow: 0 0 3px rgba(124, 58, 237, 0.22);
+:root[data-theme="light"] .home-button-primary {
+  color: #fff;
+  background: #312e81;
+  border-color: #a5a1d6;
+  box-shadow: 0 2px 6px rgba(39, 35, 91, 0.14);
+}
+
+:root[data-theme="light"] .home-button-primary:hover,
+:root[data-theme="light"] .home-button-primary:focus-visible {
+  color: #fff;
+  background: #3730a3;
+  border-color: #8b83cf;
+  box-shadow: 0 0 5px rgba(124, 58, 237, 0.24);
+}
+
+:root[data-theme="light"] .home-button-primary:active {
+  color: #fff;
+  background: #312e81;
+  border-color: #8b83cf;
+  box-shadow: 0 0 7px rgba(124, 58, 237, 0.3);
 }
 
 :root[data-theme="light"] .home-connect-button:hover,

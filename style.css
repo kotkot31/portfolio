@@ -81,14 +81,24 @@ body.contact-page #vanta-bg {
 }
 
 body.about-page #vanta-bg {
-  background-image:
-    linear-gradient(rgba(8, 18, 34, 0.48), rgba(8, 18, 34, 0.58)),
-    url("img/about-sunset-background.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-}
+  isolation: isolate;
+  background: transparent;
+}
+
+body.about-page #vanta-bg::before {
+  position: fixed;
+  z-index: -1;
+  inset: -8px;
+  content: "";
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(5, 12, 25, 0.48), rgba(5, 12, 25, 0.58)),
+    url("img/serene-office-view-stockcake.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(3px);
+}
 
 body.about-page #vanta-bg canvas {
   opacity: 0.08 !important;
@@ -164,10 +174,15 @@ body.about-page .about .p2 {
   max-height: calc(100dvh - 9rem);
   overflow-y: auto;
   margin: 0 auto;
-  padding: 0 1rem 2rem 0;
-  overscroll-behavior: contain;
-  scrollbar-color: rgba(203, 213, 225, 0.55) transparent;
-  scrollbar-width: thin;
+  padding: 1.5rem clamp(1.1rem, 3vw, 2rem);
+  color: #e7edf2;
+  background: rgba(8, 15, 29, 0.62);
+  border: 1px solid rgba(203, 213, 225, 0.18);
+  border-radius: 1.25rem;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.2);
+  overscroll-behavior: contain;
+  scrollbar-color: rgba(203, 213, 225, 0.55) transparent;
+  scrollbar-width: thin;
 }
 
 .about-content::-webkit-scrollbar {
@@ -237,10 +252,10 @@ body.contact-page #vanta-bg canvas {
     url("img/home-it-background.jpg");
 }
 
-:root[data-theme="light"] body.about-page #vanta-bg {
+:root[data-theme="light"] body.about-page #vanta-bg::before {
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.46), rgba(255, 255, 255, 0.56)),
-    url("img/about-sunset-background.png");
+    linear-gradient(rgba(23, 37, 59, 0.2), rgba(23, 37, 59, 0.28)),
+    url("img/serene-office-view-stockcake.jpg");
 }
 
 :root[data-theme="light"] body.projects-page #vanta-bg {
@@ -270,7 +285,14 @@ body.contact-page #vanta-bg canvas {
 :root[data-theme="light"] body.about-page .about .p2 {
   color: #354456;
 }
-
+
+:root[data-theme="light"] .about-content {
+  color: #354456;
+  background: rgba(226, 233, 243, 0.72);
+  border-color: rgba(30, 41, 59, 0.14);
+  box-shadow: 0 10px 28px rgba(24, 34, 53, 0.12);
+}
+
 #vanta-bg canvas {
   transition: opacity 0.25s ease;
 }

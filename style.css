@@ -2159,6 +2159,16 @@ a.project-video-button:not([disabled]):hover {
   border-style: dashed;
 }
 
+.project-card-scroll {
+  box-sizing: border-box;
+
+  max-height: 24rem;
+
+  overflow-y: auto;
+
+  scrollbar-width: thin;
+}
+
 .coming-soon-bunny {
   display: block;
 
